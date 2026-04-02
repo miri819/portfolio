@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="JAVA 백엔드 개발자 포트폴리오 - SI 팀장 / 책임">
+<title>MIRI.DEV | 최미리 포트폴리오</title>
+<!-- Pretendard (메인 폰트) -->
+<link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="page-dots" id="pageDots" aria-label="섹션 이동">
+  <a href="#hero"     class="page-dot active" data-section="hero"     title="Home"></a>
+  <a href="#about"    class="page-dot"        data-section="about"    title="About"></a>
+  <a href="#goals"    class="page-dot"        data-section="goals"    title="Goals"></a>
+  <a href="#skills"   class="page-dot"        data-section="skills"   title="Skills"></a>
+  <a href="#career"   class="page-dot"        data-section="career"   title="Career"></a>
+  <a href="#projects" class="page-dot"        data-section="projects" title="Projects"></a>
+  <a href="#planning" class="page-dot"        data-section="planning" title="Planning"></a>
+  <a href="#contact"  class="page-dot"        data-section="contact"  title="Contact"></a>
+</nav>
+
+<!-- ===================== GNB ===================== -->
+<nav class="gnb">
+  <div class="gnb-inner">
+    <a href="#hero" class="gnb-logo">MIRI<span>.DEV</span></a>
+    <ul class="gnb-nav" id="gnbNav">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#planning">Planning</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="gnb-actions">
+      <button class="btn-dark-toggle" id="darkToggle" title="다크모드 토글" aria-label="다크모드 토글"></button>
+      <button class="btn-menu" id="menuBtn" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <!-- 무한 스크롤 티커 배너 -->
+  <div class="hero-ticker" aria-hidden="true">
+    <div class="hero-ticker-track">
+      <span>🎉 반갑습니다! 제 포트폴리오에 오신 걸 환영해요!</span>
+      <span class="ticker-sep">✦</span>
+      <span>☕ Java Backend Developer</span>
+      <span class="ticker-sep">✦</span>
+      <span>🌿 SI Team Lead &amp; Architect</span>
+      <span class="ticker-sep">✦</span>
+      <span>⚡ Spring Framework</span>
+      <span class="ticker-sep">✦</span>
+      <span>🏛️ eGovFramework</span>
+      <span class="ticker-sep">✦</span>
+      <span>🗄️ Oracle · MySQL · PostgreSQL</span>
+      <span class="ticker-sep">✦</span>
+      <span>🤖 AI / 인공지능 관심</span>
+      <span class="ticker-sep">✦</span>
+      <span>🔍 QA 전문가</span>
+      <span class="ticker-sep">✦</span>
+      <span>🎓 석사과정 재학 중</span>
+      <span class="ticker-sep">✦</span>
+      <span>📁 완료 프로젝트 20+</span>
+      <span class="ticker-sep">✦</span>
+      <span>🗓️ 3년+ 실무 경력</span>
+      <span class="ticker-sep">✦</span>
+      <span>🚀 Full-Stack Engineer</span>
+      <span class="ticker-sep">✦</span>
+      <!-- 무한 루프용 복사본 -->
+      <span>🎉 반갑습니다! 제 포트폴리오에 오신 걸 환영해요!</span>
+      <span class="ticker-sep">✦</span>
+      <span>☕ Java Backend Developer</span>
+      <span class="ticker-sep">✦</span>
+      <span>🌿 SI Team Lead &amp; Architect</span>
+      <span class="ticker-sep">✦</span>
+      <span>⚡ Spring Framework</span>
+      <span class="ticker-sep">✦</span>
+      <span>🏛️ eGovFramework</span>
+      <span class="ticker-sep">✦</span>
+      <span>🗄️ Oracle · MySQL · PostgreSQL</span>
+      <span class="ticker-sep">✦</span>
+      <span>🤖 AI / 인공지능 관심</span>
+      <span class="ticker-sep">✦</span>
+      <span>🔍 QA 전문가</span>
+      <span class="ticker-sep">✦</span>
+      <span>🎓 석사과정 재학 중</span>
+      <span class="ticker-sep">✦</span>
+      <span>📁 완료 프로젝트 20+</span>
+      <span class="ticker-sep">✦</span>
+      <span>🗓️ 3년+ 실무 경력</span>
+      <span class="ticker-sep">✦</span>
+      <span>🚀 Full-Stack Engineer</span>
+      <span class="ticker-sep">✦</span>
+    </div>
+  </div>
+  <div class="hero-bg-decoration hero-bg-1"></div>
+  <div class="hero-bg-decoration hero-bg-2"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <!-- 왼쪽: 텍스트 -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Open to Collaboration
+        </div>
+        <h1 class="hero-name">
+          <span class="hero-greeting">안녕하세요, 저는</span>
+          <span class="hero-line-main">기획부터 개발,<br>테스트까지</span>
+          <span class="hero-line-accent">책임지는</span>
+          <span class="hero-line-role">풀스택 개발자</span>
+          <span class="hero-line-name">최미리입니다</span>
+        </h1>
+        <p class="hero-title">
+          <span id="typingText"></span><span class="typing-cursor"></span>
+        </p>
+        <p class="hero-desc">
+          공공기관 웹사이트부터 내부 시스템까지, SI 팀장으로서<br>
+          기획·설계·개발·유지보수 전 과정을 주도한 백엔드 개발자입니다.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">&#128196; 프로젝트 보기</a>
+          <a href="#career" class="btn-secondary">&#128203; 경력 보기</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <h3><span class="count-up" data-count="3" data-suffix="+">0</span></h3>
+            <p>년 경력</p>
+          </div>
+          <div class="hero-stat">
+            <h3><span class="count-up" data-count="20" data-suffix="+">0</span></h3>
+            <p>완료 프로젝트</p>
+          </div>
+          <div class="hero-stat">
+            <h3><span class="count-up" data-count="5" data-suffix="개">0</span></h3>
+            <p>DB 경험</p>
+          </div>
+          <div class="hero-stat">
+            <h3><span class="count-up" data-count="3" data-suffix="개">0</span></h3>
+            <p>언어 경험</p>
+          </div>
+        </div>
+      </div>
+      <!-- 오른쪽: 코드 카드 -->
+      <div class="hero-visual">
+        <div class="hero-code-card">
+          <div class="hcc-header">
+            <span class="hcc-dot"></span>
+            <span class="hcc-dot"></span>
+            <span class="hcc-dot"></span>
+            <span class="hcc-filename">Developer.java</span>
+          </div>
+          <div class="hcc-body">
+            <p><span class="hcc-kw">public class</span> <span class="hcc-cls">Developer</span> {</p>
+            <p class="hcc-pl1">String name = <span class="hcc-str">"최미리"</span>;</p>
+            <p class="hcc-pl1">String role = <span class="hcc-str">"SI Team Lead"</span>;</p>
+            <p class="hcc-pl1">String grade = <span class="hcc-str">"책임"</span>;</p>
+            <p class="hcc-pl1">String[] passion = {</p>
+            <p class="hcc-pl2"><span class="hcc-str">"Java"</span>, <span class="hcc-str">"Spring"</span>,</p>
+            <p class="hcc-pl2"><span class="hcc-str">"AI"</span>, <span class="hcc-str">"QA"</span></p>
+            <p class="hcc-pl1">};</p>
+            <p class="hcc-pl1"><span class="hcc-cmt">// 현재 석사과정 진행 중</span></p>
+            <p class="hcc-pl1">boolean isMasterStudent = <span class="hcc-num">true</span>;</p>
+            <p>}</p>
+          </div>
+        </div>
+        <div class="hero-float-badges">
+          <span class="hero-float-badge">&#9749; Java</span>
+          <span class="hero-float-badge">&#127807; Spring</span>
+          <span class="hero-float-badge">&#129302; AI</span>
+          <span class="hero-float-badge">&#128269; QA</span>
+          <span class="hero-float-badge">&#127891; 석사과정</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-avatar fade-in">
+        <div class="about-avatar-wrap">
+          <div class="about-avatar-img">&#128104;&#8205;&#128187;</div>
+          <div class="about-avatar-badge">
+            <span>SI 팀장</span>
+            책임
+          </div>
+        </div>
+        <!-- 퀵 인포 카드 -->
+        <div class="about-status-card">
+          <span class="about-status-dot"></span>
+          현재 재직 중 · SI 개발사
+        </div>
+        <div class="about-quick-facts">
+          <div class="aqf-item"><span class="aqf-icon">&#128205;</span>대한민국 · 서울</div>
+          <div class="aqf-item"><span class="aqf-icon">&#127891;</span>석사과정 재학 중</div>
+          <div class="aqf-item"><span class="aqf-icon">&#128187;</span>Java / Spring 백엔드</div>
+          <div class="aqf-item"><span class="aqf-icon">&#128101;</span>SI 팀장 · 책임</div>
+        </div>
+      </div>
+      <div class="about-text fade-in">
+        <div class="section-label">About Me</div>
+        <h2>기획부터 배포까지<br>전 과정을 책임지는 개발자</h2>
+        <p>
+          2022년 인턴을 시작으로, 2023년부터 현재까지 SI 개발사에서 정규직으로 근무 중입니다.
+          직급 <strong>책임</strong>, SI 팀장으로서 단순 개발을 넘어 <strong>팀 리드, 기술 협상, 설계, QA</strong>까지 담당하며 다수의 프로젝트를 성공적으로 완수했습니다.
+        </p>
+        <p>
+          JAVA 백엔드 중심으로 JSP 퍼블리싱, SQL 쿼리 작성, ERD 설계, 산출물 문서 작성까지 전방위로 활동합니다.
+          MySQL, Oracle, PostgreSQL, Cubrid, Tibero 등 다양한 DB 경험을 보유하고 있습니다.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight-item"><span class="highlight-icon">&#128736;</span>JAVA / Spring 백엔드 개발</div>
+          <div class="highlight-item"><span class="highlight-icon">&#128202;</span>ERD 설계 및 산출물 작성</div>
+          <div class="highlight-item"><span class="highlight-icon">&#128101;</span>SI 팀장 / 팀원 일정 관리</div>
+          <div class="highlight-item"><span class="highlight-icon">&#128269;</span>QA 테스트 시나리오 작성</div>
+          <div class="highlight-item"><span class="highlight-icon">&#128196;</span>기술 협상 회의 참석</div>
+          <div class="highlight-item"><span class="highlight-icon">&#128640;</span>CMS / 시스템 기획 설계</div>
+        </div>
+        <!-- 미니 스탯 -->
+        <div class="about-mini-stats">
+          <div class="ams-item">
+            <span class="ams-num">20+</span>
+            <span class="ams-label">완료<br>프로젝트</span>
+          </div>
+          <div class="ams-item">
+            <span class="ams-num">5종</span>
+            <span class="ams-label">DB<br>경험</span>
+          </div>
+          <div class="ams-item">
+            <span class="ams-num">3+</span>
+            <span class="ams-label">년<br>경력</span>
+          </div>
+          <div class="ams-item">
+            <span class="ams-num">3개</span>
+            <span class="ams-label">사용<br>언어</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GOALS / 관심사 & 성장 ===================== -->
+<section id="goals" class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">More About Me</span>
+      <h2 class="section-title">관심사 &amp; <span>성장</span></h2>
+      <p class="section-desc">지금 걷고 있는 길, 그리고 앞으로 나아갈 방향입니다.</p>
+    </div>
+
+    <!-- 관심 분야 카드 -->
+    <div class="goals-interests-grid">
+      <div class="interest-card fade-in">
+        <div class="interest-icon">&#127891;</div>
+        <span class="interest-status-badge status-ongoing">진행 중</span>
+        <h3>석사 과정</h3>
+        <p>현재 석사 과정을 병행하며 이론적 깊이와 연구 역량을 함께 키워가고 있습니다.</p>
+      </div>
+      <div class="interest-card fade-in">
+        <div class="interest-icon">&#129302;</div>
+        <span class="interest-status-badge status-interest">관심 분야</span>
+        <h3>AI / 인공지능</h3>
+        <p>AI 기술에 깊은 관심을 가지고 있으며, 개발에 AI를 적극 활용하는 방향을 공부하고 있습니다.</p>
+      </div>
+      <div class="interest-card fade-in">
+        <div class="interest-icon">&#128269;</div>
+        <span class="interest-status-badge status-interest">관심 분야</span>
+        <h3>QA / 품질보증</h3>
+        <p>SI 팀장으로 테스트 시나리오 작성 경험을 바탕으로 QA 전문성을 체계적으로 키우고 있습니다.</p>
+      </div>
+      <div class="interest-card fade-in">
+        <div class="interest-icon">&#128221;</div>
+        <span class="interest-status-badge status-learning">공부 중</span>
+        <h3>기획 / PM</h3>
+        <p>CMS·시스템 설계 경험을 발판으로 기획 및 프로젝트 매니지먼트 역량을 차근차근 쌓아가고 있습니다.</p>
+      </div>
+    </div>
+
+    <!-- 미래 방향 -->
+    <div class="goals-future-card fade-in">
+      <h3>&#127919; 앞으로 나아갈 방향</h3>
+      <div class="goals-future-list">
+        <div class="goals-future-item">
+          <span class="goals-future-item-icon">&#129302;</span>
+          <span>AI를 활용한 개발로의 전환 — LLM 기반 서비스, AI 보조 개발 도구 연구</span>
+        </div>
+        <div class="goals-future-item">
+          <span class="goals-future-item-icon">&#128270;</span>
+          <span>QA 전문성 강화 — 테스트 자동화, 품질 관리 체계 구축 역량 개발</span>
+        </div>
+        <div class="goals-future-item">
+          <span class="goals-future-item-icon">&#128196;</span>
+          <span>서비스 기획 능력 향상 — 사용자 중심 설계, 요구사항 분석 심화 학습</span>
+        </div>
+        <div class="goals-future-item">
+          <span class="goals-future-item-icon">&#127891;</span>
+          <span>석사 학위 취득 후 AI·데이터 관련 분야 깊이 있는 연구 및 적용</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 장단점 -->
+    <div class="sw-grid">
+      <div class="sw-card strengths fade-in">
+        <h3>&#128170; 강점</h3>
+        <div class="sw-list">
+          <div class="sw-item"><span class="sw-dot"></span><span>기획·개발·QA·문서화까지 전 과정을 혼자 주도할 수 있는 풀사이클 역량</span></div>
+          <div class="sw-item"><span class="sw-dot"></span><span>다양한 도메인(공공기관, 학회, 기업) 프로젝트 경험으로 폭넓은 업무 적응력</span></div>
+          <div class="sw-item"><span class="sw-dot"></span><span>팀장으로서 일정 조율, 고객 응대, 기술 협상까지 커뮤니케이션 능력</span></div>
+          <div class="sw-item"><span class="sw-dot"></span><span>MySQL·Oracle·PostgreSQL·Cubrid·Tibero 등 다양한 DB 실전 경험</span></div>
+        </div>
+      </div>
+      <div class="sw-card weaknesses fade-in">
+        <h3>&#127807; 성장 중인 부분</h3>
+        <div class="sw-list">
+          <div class="sw-item"><span class="sw-dot"></span><span>서버 인프라 및 배포(CI/CD) 경험 부족 — 클라우드·DevOps 영역 공부 시작</span></div>
+          <div class="sw-item"><span class="sw-dot"></span><span>AI·머신러닝 이론 학습 진행 중 — 석사 과정 통해 체계적으로 보완 예정</span></div>
+          <div class="sw-item"><span class="sw-dot"></span><span>영어 기술 문서 작성 능력 향상 목표 — 글로벌 오픈소스 기여를 위해 준비 중</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 섹션 구분선 -->
+<div class="section-divider" aria-hidden="true">
+  <span class="sd-line"></span>
+  <span class="sd-ornament">✦ ✦ ✦</span>
+  <span class="sd-line"></span>
+</div>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Tech Stack</span>
+      <h2 class="section-title">기술 <span>스택</span></h2>
+      <p class="section-desc">다양한 프로젝트를 통해 쌓아온 기술들입니다.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category fade-in">
+        <div class="skill-category-title">
+          <div class="skill-category-icon">&#9749;</div>
+          Back-End
+        </div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info"><span>Java</span><span>95%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Spring / Spring MVC</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>MyBatis</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>eGovFramework</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Python</span><span>40%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="40"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>PHP</span><span>50%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="50"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category fade-in">
+        <div class="skill-category-title">
+          <div class="skill-category-icon">&#127760;</div>
+          Front-End / View
+        </div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info"><span>JSP</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>HTML / CSS</span><span>82%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="82"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>JavaScript / jQuery</span><span>78%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="78"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Ajax / REST API</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category fade-in">
+        <div class="skill-category-title">
+          <div class="skill-category-icon">&#128452;</div>
+          Database
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Oracle</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Cubrid</span>
+          <span class="skill-tag">Tibero</span>
+          <span class="skill-tag">SQL 쿼리 작성</span>
+          <span class="skill-tag">ERD 설계</span>
+        </div>
+      </div>
+      <div class="skill-category fade-in">
+        <div class="skill-category-title">
+          <div class="skill-category-icon">&#128295;</div>
+          Tools &amp; 기타
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">IntelliJ / Eclipse</span>
+          <span class="skill-tag">Maven</span>
+          <span class="skill-tag">Tomcat</span>
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">ERD 작성</span>
+          <span class="skill-tag">테스트 시나리오</span>
+          <span class="skill-tag">산출물 문서화</span>
+          <span class="skill-tag">공수 산출</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CAREER ===================== -->
+<section id="career" class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Career</span>
+      <h2 class="section-title">경력 <span>타임라인</span></h2>
+      <p class="section-desc">인턴부터 SI 팀장까지, 꾸준히 성장해온 여정입니다.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item fade-in">
+        <div class="timeline-year">
+          <div class="timeline-year-text">2022.09<br>~<br>2022.12</div>
+          <div class="timeline-year-sub">4개월</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-title">IT 스타트업 (서울 성수동)</div>
+                <div class="timeline-subtitle">웹 개발 인턴</div>
+              </div>
+              <span class="timeline-badge badge-intern">인턴</span>
+            </div>
+            <ul class="timeline-ul">
+              <li>PHP 기반 웹 서비스 개발 참여</li>
+              <li>실무 환경에서의 첫 개발 경험 습득</li>
+              <li>웹 개발 기초 역량 및 협업 프로세스 습득</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="timeline-tag">PHP</span>
+              <span class="timeline-tag">HTML/CSS</span>
+              <span class="timeline-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item fade-in">
+        <div class="timeline-year">
+          <div class="timeline-year-text">2023.03<br>~<br>현재</div>
+          <div class="timeline-year-sub">3년+</div>
+        </div>
+        <div class="timeline-dot active"></div>
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-title">SI 개발사</div>
+                <div class="timeline-subtitle">정규직 · 책임 / SI 팀장</div>
+              </div>
+              <span class="timeline-badge badge-current">재직 중</span>
+            </div>
+            <ul class="timeline-ul">
+              <li><strong>SI 팀장</strong>으로 팀원 관리 및 프로젝트 일정 조율</li>
+              <li>공공기관 웹 홈페이지 및 내부 업무 시스템 제작</li>
+              <li>사기업 웹 홈페이지 및 학회 논문투고 시스템 제작</li>
+              <li>VPP 전력 모니터링 시스템 1인 단독 개발</li>
+              <li>각 프로젝트 유지보수 및 고도화 다수</li>
+              <li>ERD 설계, 명세서, 테스트 시나리오 등 <strong>산출물 전담 관리</strong></li>
+              <li>임원 동행 기술 협상 회의 참석 및 고객사 응대</li>
+              <li>신규 프로젝트 개발 공수 기간 산출 및 SI 팀 면접 진행</li>
+              <li>자사 신규 CMS 및 논문투고 시스템 설계 기획 경험</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Java</span>
+              <span class="timeline-tag">Spring MVC</span>
+              <span class="timeline-tag">eGovFramework</span>
+              <span class="timeline-tag">MyBatis</span>
+              <span class="timeline-tag">JSP</span>
+              <span class="timeline-tag">MySQL</span>
+              <span class="timeline-tag">Oracle</span>
+              <span class="timeline-tag">PostgreSQL</span>
+              <span class="timeline-tag">Cubrid</span>
+              <span class="timeline-tag">Tibero</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Projects</span>
+      <h2 class="section-title">진행한 <span>프로젝트</span></h2>
+      <p class="section-desc">다양한 도메인에서 참여하고 완수한 프로젝트들입니다.</p>
+    </div>
+
+    <!-- 뷰 전환 탭 -->
+    <div class="view-tab-bar fade-in">
+      <button class="view-tab active" id="btnCardView">
+        <span>&#9783;</span> 카드 보기
+      </button>
+      <button class="view-tab" id="btnTimelineView">
+        <span>&#128197;</span> 타임라인 보기
+      </button>
+    </div>
+
+    <!-- 카드 뷰 (기존) -->
+    <div id="cardView">
+      <div class="projects-toolbar fade-in">
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">전체</button>
+          <button class="filter-btn" data-filter="system">시스템</button>
+          <button class="filter-btn" data-filter="web">홈페이지</button>
+          <button class="filter-btn" data-filter="paper">논문투고</button>
+          <button class="filter-btn" data-filter="enhance">고도화</button>
+          <button class="filter-btn" data-filter="support">서포트</button>
+        </div>
+        <div class="search-box">
+          <span class="search-icon">&#128269;</span>
+          <input type="text" id="projectSearch" placeholder="프로젝트 검색..." autocomplete="off">
+        </div>
+      </div>
+      <div class="projects-grid">
+        <div class="no-results" id="noResults" style="display:none;">검색 결과가 없습니다.</div>
+        <div class="project-card fade-in" data-category="system">
+          <div class="project-card-top"><span class="project-cat-badge cat-system">시스템</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">계근 시스템</div>
+          <div class="project-desc">화물 차량 중량 측정 및 기록 관리를 위한 계근 업무 시스템. 실시간 데이터 입력 및 이력 조회 기능 포함.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">MySQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="system">
+          <div class="project-card-top"><span class="project-cat-badge cat-system">시스템</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">5G/PC 반입반출 시스템</div>
+          <div class="project-desc">보안 구역 내 5G 기기 및 PC 반입·반출을 관리하는 내부 보안 시스템. 승인 워크플로우 및 이력 추적 기능 구현.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">MyBatis</span><span class="project-tech-tag">Oracle</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="system">
+          <div class="project-card-top"><span class="project-cat-badge cat-system">시스템</span><span class="project-team">&#128100; 1인</span></div>
+          <div class="project-title">VPP 전력 모니터링 시스템</div>
+          <div class="project-desc">가상발전소(VPP) 전력 데이터를 실시간으로 수집·시각화하는 모니터링 시스템. 대시보드 및 알림 기능 1인 단독 개발.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">Chart.js</span><span class="project-tech-tag">PostgreSQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="system">
+          <div class="project-card-top"><span class="project-cat-badge cat-system">시스템</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">버스타다 (예약 / 관리자 시스템)</div>
+          <div class="project-desc">버스 좌석 예약 사용자 앱과 관리자 백오피스를 포함한 통합 예약 플랫폼. 실시간 좌석 현황 및 예약 관리 기능 구현.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">MySQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="system">
+          <div class="project-card-top"><span class="project-cat-badge cat-system">시스템</span><span class="project-team">&#128100; 1인</span></div>
+          <div class="project-title">조합원 생일 조회 시스템</div>
+          <div class="project-desc">노동조합 조합원의 생일 정보를 조회하고 관리하는 내부 시스템. 1인 단독 개발로 빠르게 납품 완료.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">MySQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="system">
+          <div class="project-card-top"><span class="project-cat-badge cat-system">시스템</span><span class="project-team">&#128100; 3인</span></div>
+          <div class="project-title">자료 공유 시스템</div>
+          <div class="project-desc">조직 내 문서·자료를 업로드하고 공유하는 내부 시스템. 카테고리 분류, 검색, 권한 관리 기능 구현.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">MyBatis</span><span class="project-tech-tag">Oracle</span></div>
+        </div>
+        <!-- TODO: href를 실제 GitHub Pages 주소로 교체하세요 -->
+        <a class="project-card project-card-link fade-in" data-category="system"
+           href="#" target="_blank" rel="noopener noreferrer">
+          <div class="project-card-top">
+            <span class="project-cat-badge cat-system">시스템</span>
+            <span class="project-team project-team-solo">&#127775; 단독 개발</span>
+          </div>
+          <div class="project-title">
+            코딩 테스트 시스템
+            <span class="project-link-icon" title="새 탭으로 열림">&#128279;</span>
+          </div>
+          <div class="project-desc">자사 채용 과정에서 활용하기 위한 온라인 코딩 테스트 플랫폼. 문제 출제·관리, 응시자 채점, 결과 통계 기능 기획 및 개발.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">MySQL</span></div>
+          <div class="project-link-badge">&#128279; GitHub Pages에서 직접 보기</div>
+        </a>
+        <div class="project-card fade-in" data-category="web">
+          <div class="project-card-top"><span class="project-cat-badge cat-web">홈페이지</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">대전 동·서부 학교지원센터</div>
+          <div class="project-desc">공공기관 학교지원 서비스 홈페이지. 온라인 신청·접수 시스템, 공지사항, 게시판 기능 포함.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">eGovFramework</span><span class="project-tech-tag">Java</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">PostgreSQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="web">
+          <div class="project-card-top"><span class="project-cat-badge cat-web">홈페이지</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">산업기술보호협회 홈페이지</div>
+          <div class="project-desc">산업기술보호 관련 협회의 공식 홈페이지. 회원 관리, 교육 신청, 자료실, 공지사항 등 협회 업무 전반 지원.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">Cubrid</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="web">
+          <div class="project-card-top"><span class="project-cat-badge cat-web">홈페이지</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">산업보안관리사 홈페이지</div>
+          <div class="project-desc">자격증 시험 관련 홈페이지. 온라인 시험 예약 기능, 수험 정보 안내, 합격자 발표 등 자격증 취득 전 과정 지원.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">MySQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="web">
+          <div class="project-card-top"><span class="project-cat-badge cat-web">홈페이지</span><span class="project-team">&#128100; 3인</span></div>
+          <div class="project-title">충남교육과정평가정보원</div>
+          <div class="project-desc">충청남도 교육과정 평가 정보를 제공하는 공공기관 홈페이지. 공지·자료 관리, 통계, 내부 업무 지원 기능 구현.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">eGovFramework</span><span class="project-tech-tag">Java</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">Oracle</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="paper">
+          <div class="project-card-top"><span class="project-cat-badge cat-paper">논문투고</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">측량학회 논문투고 시스템</div>
+          <div class="project-desc">측량 분야 학술지 논문 온라인 투고·심사 시스템. 저자 투고, 심사자 배정, 심사 결과 통보, 게재 확정 전 과정 자동화.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">MySQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="paper">
+          <div class="project-card-top"><span class="project-cat-badge cat-paper">논문투고</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">웰다잉 학회 논문투고 시스템</div>
+          <div class="project-desc">웰다잉(Well-Dying) 관련 학술 학회의 논문 투고·심사 플랫폼. 논문 접수부터 게재 결정까지 온라인 워크플로우 구현.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">MySQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="enhance">
+          <div class="project-card-top"><span class="project-cat-badge cat-enhance">고도화</span><span class="project-team">&#128100; 1인</span></div>
+          <div class="project-title">123사비 고도화</div>
+          <div class="project-desc">기존 서비스의 성능 개선 및 신규 기능 추가 고도화. UI 개선, 기능 확장, 유지보수성 향상 작업 1인 진행.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">MySQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="enhance">
+          <div class="project-card-top"><span class="project-cat-badge cat-enhance">고도화</span><span class="project-team">&#128100; 1인</span></div>
+          <div class="project-title">대전 학교지원센터 고도화</div>
+          <div class="project-desc">기존 학교지원센터 홈페이지의 기능 확장 및 개선. 신청 프로세스 개선, 통계 기능 추가, 접근성 향상 작업 단독 수행.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">eGovFramework</span><span class="project-tech-tag">Java</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">PostgreSQL</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="enhance">
+          <div class="project-card-top"><span class="project-cat-badge cat-enhance">고도화</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">정보보호업무지원시스템 고도화</div>
+          <div class="project-desc">정보보호 업무 처리를 지원하는 내부 시스템의 고도화. 레거시 코드 리팩토링 및 신규 업무 기능 추가.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">Oracle</span><span class="project-tech-tag">Tibero</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="enhance">
+          <div class="project-card-top"><span class="project-cat-badge cat-enhance">고도화</span><span class="project-team">&#128100; 1인</span></div>
+          <div class="project-title">과학기술정보통신부 검색 페이지</div>
+          <div class="project-desc">공공기관 포털의 통합 검색 기능 개선. 검색 정확도 향상, UI 개편, 빠른 결과 노출 최적화 1인 단독 진행.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">eGovFramework</span><span class="project-tech-tag">Java</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">Oracle</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="enhance">
+          <div class="project-card-top"><span class="project-cat-badge cat-enhance">고도화</span><span class="project-team">&#128100; 2인</span></div>
+          <div class="project-title">산학기술학회 홈페이지 고도화</div>
+          <div class="project-desc">산학기술 분야 학회 홈페이지의 기능 고도화. 회원 관리 개선, 논문 열람 기능 추가, 반응형 UI 개선 작업.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">Cubrid</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="enhance">
+          <div class="project-card-top"><span class="project-cat-badge cat-enhance">고도화</span><span class="project-team">&#128100; 1인</span></div>
+          <div class="project-title">과학기술정보통신부 관리자 기능</div>
+          <div class="project-desc">공공기관 관리자 백오피스의 일부 기능 신규 구현. 데이터 관리, 통계 조회, 콘텐츠 편집 기능 1인 단독 개발.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">eGovFramework</span><span class="project-tech-tag">Java</span><span class="project-tech-tag">JSP</span><span class="project-tech-tag">Oracle</span></div>
+        </div>
+        <div class="project-card fade-in" data-category="support">
+          <div class="project-card-top"><span class="project-cat-badge cat-support">서포트</span><span class="project-team">&#128100; 서포트</span></div>
+          <div class="project-title">중소벤처기업부 서포트</div>
+          <div class="project-desc">공공기관 프로젝트 진행 시 기술 서포트 참여. 개발 이슈 해결 지원 및 기술 자문 역할 수행.</div>
+          <div class="project-tech-tags"><span class="project-tech-tag">Java</span><span class="project-tech-tag">Spring</span><span class="project-tech-tag">eGovFramework</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 타임라인 뷰 -->
+    <div id="timelineView" class="project-timeline-view">
+      <div class="ptl-year-group">2023</div>
+      <div class="ptl-item"><div class="ptl-date">23.03~23.05</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">자사 유지보수시스템 정비</span><span class="ptl-cat-badge cat-system">시스템</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">23.05~23.07</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">5G/PC 반입반출 시스템</span><span class="ptl-cat-badge cat-system">시스템</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">23.08~24.02</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">자료 공유 시스템</span><span class="ptl-cat-badge cat-system">시스템</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">23.11~24.01</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">과학기술정보통신부 검색 페이지</span><span class="ptl-cat-badge cat-enhance">고도화</span></div></div></div>
+      <div class="ptl-year-group">2024</div>
+      <div class="ptl-item"><div class="ptl-date">24.02~24.05</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">조합원 생일 조회 시스템</span><span class="ptl-cat-badge cat-system">시스템</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">24.05~24.10</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">정보보호업무지원시스템</span><span class="ptl-cat-badge cat-enhance">고도화</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">24.06~24.09</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">산학기술학회 고도화</span><span class="ptl-cat-badge cat-enhance">고도화</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">24.07~24.09</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">계근 시스템</span><span class="ptl-cat-badge cat-system">시스템</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">24.09~25.02</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">측량학회 논문투고 시스템</span><span class="ptl-cat-badge cat-paper">논문투고</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">24.10~24.12</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">대전 동/서부 학교지원센터</span><span class="ptl-cat-badge cat-web">홈페이지</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">24.10~25.02</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">산업기술보호협회 홈페이지</span><span class="ptl-cat-badge cat-web">홈페이지</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">24.11~24.12</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">중소벤처기업부 서포트</span><span class="ptl-cat-badge cat-support">서포트</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">24.11~25.03</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">산업보안관리사 홈페이지</span><span class="ptl-cat-badge cat-web">홈페이지</span></div></div></div>
+      <div class="ptl-year-group">2025</div>
+      <div class="ptl-item"><div class="ptl-date">25.01~25.04</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">버스타다 (예약/관리자 시스템)</span><span class="ptl-cat-badge cat-system">시스템</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">25.02~25.03</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">123사비 고도화</span><span class="ptl-cat-badge cat-enhance">고도화</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">25.03~25.05</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">웰다잉 학회 논문투고 시스템</span><span class="ptl-cat-badge cat-paper">논문투고</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">25.05~25.08</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">산학기술학회 고도화</span><span class="ptl-cat-badge cat-enhance">고도화</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">25.06~25.10</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">VPP 전력 모니터링 시스템</span><span class="ptl-cat-badge cat-system">시스템</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">25.09~25.10</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">대전 동/서부 학교지원센터 고도화</span><span class="ptl-cat-badge cat-enhance">고도화</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">25.09~26.01</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">충청남도교육과정평가정보원</span><span class="ptl-cat-badge cat-web">홈페이지</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">25.10~25.11</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">과학기술정보통신부 관리자 기능</span><span class="ptl-cat-badge cat-enhance">고도화</span></div></div></div>
+      <div class="ptl-year-group">2026</div>
+      <div class="ptl-item"><div class="ptl-date">26.02~26.02</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">자사 코딩 테스트 시스템</span><span class="ptl-cat-badge cat-system">시스템</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">26.02~26.03</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">산학기술학회 고도화 오픈 및 하자보수</span><span class="ptl-cat-badge cat-enhance">고도화</span></div></div></div>
+      <div class="ptl-item"><div class="ptl-date">26.03~진행 중</div><div class="ptl-dot"></div><div class="ptl-content"><div class="ptl-inner"><span class="ptl-title">정보보호업무지원시스템</span><span class="ptl-cat-badge cat-enhance">고도화</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 섹션 구분선 -->
+<div class="section-divider" aria-hidden="true">
+  <span class="sd-line"></span>
+  <span class="sd-ornament">✦ ✦ ✦</span>
+  <span class="sd-line"></span>
+</div>
+
+<!-- ===================== PLANNING ===================== -->
+<section id="planning" class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Planning</span>
+      <h2 class="section-title">기획 <span>포트폴리오</span></h2>
+      <p class="section-desc">실무에서 직접 작성한 기획 문서입니다. 회사 자산이므로 예시 일부만 공개합니다.</p>
+    </div>
+    <div class="planning-grid">
+
+      <!-- 카드 1: CMS 기획 -->
+      <div class="planning-card fade-in">
+        <div class="planning-card-header">
+          <span class="planning-type-badge">&#128202; 기획 문서</span>
+          <span class="planning-tool-badge">&#128196; Google Docs</span>
+        </div>
+        <div class="planning-card-icon">&#128193;</div>
+        <h3 class="planning-card-title">컨텐츠 관리 시스템 기획</h3>
+        <p class="planning-card-desc">
+          자사 신규 CMS 구축을 위해 직접 작성한 시스템 기획서입니다.
+          메뉴 구조 설계, 권한 체계 정의, 콘텐츠 유형 및 관리 방식,
+          화면 구성안 등 시스템 전반의 기획 내용을 담고 있습니다.
+        </p>
+        <div class="planning-card-tags">
+          <span class="planning-tag">메뉴 구조 설계</span>
+          <span class="planning-tag">권한 체계</span>
+          <span class="planning-tag">화면 구성안</span>
+          <span class="planning-tag">ERD</span>
+        </div>
+        <div class="planning-card-notice">
+          <span>&#128274;</span> 회사 자산으로 일부 내용만 예시로 공개합니다.
+        </div>
+        <button class="planning-preview-btn" data-modal="modal-cms">
+          &#128247; 예시 미리보기
+        </button>
+      </div>
+
+      <!-- 카드 2: 논문투고 플로우 -->
+      <div class="planning-card fade-in">
+        <div class="planning-card-header">
+          <span class="planning-type-badge">&#128203; 플로우 문서</span>
+          <span class="planning-tool-badge">&#128196; Google Docs</span>
+        </div>
+        <div class="planning-card-icon">&#128196;</div>
+        <h3 class="planning-card-title">논문투고 시스템 사용자 플로우</h3>
+        <p class="planning-card-desc">
+          논문투고 시스템의 역할별 사용자 흐름을 정리한 기획 문서입니다.
+          저자·심사자·편집장 역할별 프로세스를 단계별로 시각화하고
+          시스템 개발 전 전체 흐름을 사전 정의한 플로우 차트입니다.
+        </p>
+        <div class="planning-card-tags">
+          <span class="planning-tag">사용자 플로우</span>
+          <span class="planning-tag">역할별 프로세스</span>
+          <span class="planning-tag">플로우 차트</span>
+          <span class="planning-tag">UX 기획</span>
+        </div>
+        <div class="planning-card-notice">
+          <span>&#128274;</span> 회사 자산으로 일부 내용만 예시로 공개합니다.
+        </div>
+        <button class="planning-preview-btn" data-modal="modal-paper">
+          &#128247; 예시 미리보기
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PLANNING MODALS ===================== -->
+<div class="planning-modal" id="modal-cms" role="dialog" aria-modal="true" aria-label="CMS 기획 예시">
+  <div class="planning-modal-backdrop"></div>
+  <div class="planning-modal-box">
+    <div class="planning-modal-head">
+      <h3>&#128193; 컨텐츠 관리 시스템 기획 — 예시</h3>
+      <button class="planning-modal-close" aria-label="닫기">&#10005;</button>
+    </div>
+    <div class="planning-modal-body">
+      <div class="planning-img-wrap">
+        <img src="img/planning-cms.png" alt="CMS 기획 예시 이미지"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="planning-img-placeholder" style="display:none">
+          <div class="pip-icon">&#128193;</div>
+          <p class="pip-title">이미지 준비 중</p>
+          <p class="pip-sub">실제 기획서 스크린샷으로 교체 예정입니다.<br><code>static/img/planning-cms.png</code></p>
+        </div>
+      </div>
+    </div>
+    <div class="planning-modal-foot">
+      <span>&#9888;&#65039; 실제 문서 내용은 회사 기밀로 일부만 공개합니다.</span>
+    </div>
+  </div>
+</div>
+
+<div class="planning-modal" id="modal-paper" role="dialog" aria-modal="true" aria-label="논문투고 플로우 예시">
+  <div class="planning-modal-backdrop"></div>
+  <div class="planning-modal-box">
+    <div class="planning-modal-head">
+      <h3>&#128196; 논문투고 시스템 플로우 — 예시</h3>
+      <button class="planning-modal-close" aria-label="닫기">&#10005;</button>
+    </div>
+    <div class="planning-modal-body">
+      <div class="planning-img-wrap">
+        <img src="img/planning-paper.png" alt="논문투고 플로우 예시 이미지"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="planning-img-placeholder" style="display:none">
+          <div class="pip-icon">&#128196;</div>
+          <p class="pip-title">이미지 준비 중</p>
+          <p class="pip-sub">실제 플로우 차트 이미지로 교체 예정입니다.<br><code>static/img/planning-paper.png</code></p>
+        </div>
+      </div>
+    </div>
+    <div class="planning-modal-foot">
+      <span>&#9888;&#65039; 실제 문서 내용은 회사 기밀로 일부만 공개합니다.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Contact</span>
+      <h2 class="section-title">연락 및 <span>채용 안내</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <h2>함께 일하고 싶으신가요?</h2>
+        <p>새로운 프로젝트나 협업에 관심이 있으시다면 편하게 연락해 주세요.<br>공공 웹사이트, 내부 시스템, 논문투고 플랫폼 등 다양한 도메인에서 함께할 수 있습니다.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128231;</div>
+            <span>이메일 주소를 입력해주세요</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128279;</div>
+            <span>GitHub 프로필 주소를 입력해주세요</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128205;</div>
+            <span>대한민국 · 재직 중</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-card fade-in">
+        <h3>&#128188; 채용을 고려하신다면</h3>
+        <div class="hire-list">
+          <div class="hire-item">
+            <span class="hire-icon">&#9889;</span>
+            <div>
+              <strong>즉시 전력감</strong>
+              <p>eGovFramework 기반 공공기관 프로젝트 즉시 투입 가능합니다.</p>
+            </div>
+          </div>
+          <div class="hire-item">
+            <span class="hire-icon">&#128260;</span>
+            <div>
+              <strong>기획 ~ 배포 원스톱</strong>
+              <p>요구사항 분석 → 설계 → 개발 → QA → 배포 전 과정 단독 수행 경험 보유.</p>
+            </div>
+          </div>
+          <div class="hire-item">
+            <span class="hire-icon">&#128101;</span>
+            <div>
+              <strong>팀 리드 경험</strong>
+              <p>SI 팀장으로 일정 조율·고객 응대·기술 협상·신규 채용까지 수행.</p>
+            </div>
+          </div>
+          <div class="hire-item">
+            <span class="hire-icon">&#128452;</span>
+            <div>
+              <strong>다중 DB 실전 경험</strong>
+              <p>MySQL · Oracle · PostgreSQL · Cubrid · Tibero 모두 실무 경험 보유.</p>
+            </div>
+          </div>
+          <div class="hire-item">
+            <span class="hire-icon">&#127891;</span>
+            <div>
+              <strong>지속 성장 중인 개발자</strong>
+              <p>석사 과정 병행 + AI / QA 전문성 꾸준히 향상 중.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+      === GitHub Pages 배포 방법 (내부 참고용) ===
+        <div class="contact-card fade-in">
+          <h3>&#128640; GitHub Pages 무료 배포 방법</h3>
+          <div class="deploy-steps">
+            1. github.com 에서 무료 계정 생성
+            2. username.github.io 이름으로 리포지토리 생성
+            3. index.html, css/, js/ 폴더 업로드
+            4. Settings > Pages > Branch: main 선택 후 Save
+            5. https://username.github.io 로 접속!
+          </div>
+        </div>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">MIRI.DEV</div>
+    <p class="footer-text">JAVA Back-End Developer &middot; SI Team Lead &middot; 최미리</p>
+    <p class="footer-text">&#169; 2026 Developer Portfolio. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
