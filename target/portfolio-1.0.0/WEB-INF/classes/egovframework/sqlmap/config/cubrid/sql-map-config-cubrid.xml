@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+        <setting name="callSettersOnNulls" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <typeAlias alias="map" type="java.util.Map" />
+        <typeAlias alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+<!--        <typeAlias alias="userVo" type="hanaro.com.user.service.UserVo"/>-->
+<!--        <typeAlias alias="memberVo" type="hanaro.com.page.service.MemberVo"/>-->
+    </typeAliases>
+
+    <mappers>
+<!--        <mapper resource="egovframework/sqlmap/com/user/user_SQL.xml"/>-->
+<!--        <mapper resource="egovframework/sqlmap/com/member/member_SQL.xml"/>-->
+    </mappers>
+
+</configuration>

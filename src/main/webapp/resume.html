@@ -1,0 +1,1005 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>최미리 이력서 | Java 백엔드 개발자</title>
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <!-- html2pdf.js (클라이언트 PDF 생성) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+          integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    /* ============================================================
+       Variables
+    ============================================================ */
+    :root {
+      --rose:        #C0415A;
+      --rose-dark:   #9B2335;
+      --rose-mid:    #D4627A;
+      --rose-light:  #F0C4CC;
+      --rose-pale:   #FFF0F3;
+      --rose-soft:   #FFF8FA;
+      --text:        #1A1A2E;
+      --text-sub:    #44445C;
+      --text-muted:  #888899;
+      --white:       #FFFFFF;
+      --sidebar-bg:  #FFF5F7;
+      --border:      #F0C4CC;
+    }
+
+    /* ============================================================
+       Reset
+    ============================================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+
+    body {
+      font-family: "Pretendard Variable", Pretendard, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      background: #f2f3f7;
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ============================================================
+       Top Action Bar
+    ============================================================ */
+    .dl-bar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 28px;
+      gap: 16px;
+      box-shadow: 0 2px 16px rgba(192,65,90,0.08);
+    }
+    .dl-bar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .dl-bar-brand-name {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--rose);
+      letter-spacing: -0.4px;
+    }
+    .dl-bar-brand-name span {
+      color: var(--text-sub);
+      font-weight: 500;
+    }
+    .dl-bar-sep {
+      width: 1px;
+      height: 18px;
+      background: var(--border);
+    }
+    .dl-bar-label {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .dl-bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-sub);
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-back:hover {
+      background: var(--rose-pale);
+      color: var(--rose);
+      border-color: var(--rose-light);
+    }
+    .btn-pdf {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 9px 22px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s;
+      box-shadow: 0 4px 14px rgba(192,65,90,0.35);
+      letter-spacing: 0.2px;
+    }
+    .btn-pdf:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(192,65,90,0.45);
+    }
+    .btn-pdf:active { transform: translateY(0); }
+    .btn-pdf:disabled {
+      opacity: 0.7;
+      cursor: wait;
+      transform: none;
+    }
+
+    /* ============================================================
+       Resume Wrapper
+    ============================================================ */
+    .resume-wrap {
+      max-width: 860px;
+      margin: 32px auto 64px;
+      padding: 0 20px;
+    }
+
+    .resume-page {
+      background: white;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 10px 50px rgba(0,0,0,0.13);
+    }
+
+    /* ============================================================
+       Header
+    ============================================================ */
+    .resume-header {
+      background: linear-gradient(135deg, #C0415A 0%, #9B2335 100%);
+      color: white;
+      padding: 36px 40px 32px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .resume-header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -40px;
+      width: 220px; height: 220px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+    .resume-header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: 160px;
+      width: 140px; height: 140px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+
+    .resume-photo {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid rgba(255,255,255,0.55);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.28);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .resume-header-info {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+    .resume-header-info h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 5px;
+    }
+    .resume-header-subtitle {
+      font-size: 14.5px;
+      font-weight: 500;
+      opacity: 0.88;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .resume-header-subtitle .divider {
+      width: 3px;
+      height: 3px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+    }
+    .resume-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .resume-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 20px;
+      padding: 5px 13px;
+      font-size: 12.5px;
+      font-weight: 500;
+    }
+    .resume-tag .tag-em {
+      font-weight: 700;
+      color: #ffcdd5;
+    }
+
+    /* ============================================================
+       Body: 2-column
+    ============================================================ */
+    .resume-body {
+      display: flex;
+      align-items: stretch;
+    }
+
+    /* ---------- Sidebar ---------- */
+    .resume-sidebar {
+      width: 228px;
+      min-width: 228px;
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--border);
+      padding: 26px 20px 32px;
+    }
+
+    /* ---------- Main ---------- */
+    .resume-main {
+      flex: 1;
+      padding: 26px 32px 32px;
+    }
+
+    /* ============================================================
+       Section common
+    ============================================================ */
+    .resume-sec { margin-bottom: 24px; }
+    .resume-sec:last-child { margin-bottom: 0; }
+
+    .sec-heading {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--rose);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 13px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--rose-light);
+    }
+    .sec-heading .sh-icon { font-size: 14px; }
+
+    /* ============================================================
+       Sidebar — Contact
+    ============================================================ */
+    .contact-list { display: flex; flex-direction: column; gap: 7px; }
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+    .contact-row .ci { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+    .contact-row strong { color: var(--text); font-weight: 600; }
+    .contact-muted { color: var(--text-muted); font-style: italic; }
+
+    /* ============================================================
+       Sidebar — Skills
+    ============================================================ */
+    .skill-group { margin-bottom: 13px; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .sg-label {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: var(--rose-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .sp {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 12px;
+      line-height: 1.4;
+      border: 1px solid transparent;
+    }
+    .sp-core {
+      background: var(--rose);
+      color: white;
+    }
+    .sp-strong {
+      background: var(--rose-light);
+      border-color: var(--rose-mid);
+      color: var(--rose-dark);
+      font-weight: 700;
+    }
+    .sp-normal {
+      background: white;
+      border-color: var(--border);
+      color: var(--text-sub);
+    }
+
+    /* ============================================================
+       Sidebar — Education
+    ============================================================ */
+    .edu-item { margin-bottom: 14px; }
+    .edu-item:last-child { margin-bottom: 0; }
+    .edu-period {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--rose);
+      margin-bottom: 2px;
+    }
+    .edu-school {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .edu-dept { font-size: 12px; color: var(--text-sub); margin-top: 1px; }
+    .edu-badge {
+      display: inline-block;
+      margin-top: 4px;
+      background: var(--rose);
+      color: white;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .edu-badge.grad {
+      background: var(--text-muted);
+    }
+
+    /* ============================================================
+       Sidebar — Keywords
+    ============================================================ */
+    .keyword-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .kc {
+      font-size: 11.5px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 12px;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--text-sub);
+    }
+
+    /* ============================================================
+       Main — Summary
+    ============================================================ */
+    .summary-box {
+      background: var(--rose-soft);
+      border-left: 3px solid var(--rose);
+      border-radius: 0 8px 8px 0;
+      padding: 13px 16px;
+      font-size: 13px;
+      color: var(--text-sub);
+      line-height: 1.8;
+    }
+    .summary-box strong { color: var(--rose-dark); }
+
+    /* ============================================================
+       Main — Career
+    ============================================================ */
+    .career-list-wrap { display: flex; flex-direction: column; gap: 18px; }
+    .career-item {
+      padding-left: 16px;
+      border-left: 2px solid var(--rose-light);
+      position: relative;
+    }
+    .career-item::before {
+      content: '';
+      position: absolute;
+      left: -5px; top: 8px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--rose-light);
+    }
+    .career-item.current::before {
+      background: var(--rose);
+      box-shadow: 0 0 0 3px var(--rose-light);
+    }
+    .career-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .career-company {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .career-period {
+      font-size: 11.5px;
+      color: var(--rose);
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .career-role {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cbadge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 10px;
+    }
+    .cbadge-current { background: #e8f5e9; color: #2e7d32; }
+    .cbadge-intern   { background: #e3f2fd; color: #1565c0; }
+
+    .career-duties { display: flex; flex-direction: column; gap: 3px; margin-bottom: 10px; }
+    .career-duty {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 12.5px;
+      color: var(--text-sub);
+      line-height: 1.55;
+    }
+    .career-duty::before {
+      content: '·';
+      color: var(--rose);
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .career-techs { display: flex; flex-wrap: wrap; gap: 4px; }
+    .ct {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 9px;
+      border-radius: 10px;
+      background: var(--rose-pale);
+      border: 1px solid var(--rose-light);
+      color: var(--rose-dark);
+    }
+
+    /* ============================================================
+       Main — Projects
+    ============================================================ */
+    .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .project-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: white;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .project-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    .proj-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      flex: 1;
+    }
+    .proj-badge {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 8px;
+      background: var(--rose-pale);
+      color: var(--rose);
+      white-space: nowrap;
+    }
+    .proj-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 6px;
+    }
+    .proj-role {
+      font-size: 11.5px;
+      color: var(--rose-dark);
+      font-weight: 600;
+    }
+    .proj-role span {
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       Main — Personality
+    ============================================================ */
+    .personality-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .pers-col { border-radius: 8px; padding: 14px 16px; }
+    .pers-col.strengths {
+      background: #FFF5F7;
+      border: 1px solid var(--rose-light);
+    }
+    .pers-col.growth {
+      background: #F7F8FF;
+      border: 1px solid #CCCCE0;
+    }
+    .pers-col-title {
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .pers-col.strengths .pers-col-title { color: var(--rose); }
+    .pers-col.growth .pers-col-title { color: #555577; }
+    .pers-item { margin-bottom: 9px; }
+    .pers-item:last-child { margin-bottom: 0; }
+    .pers-item-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .pers-item-desc {
+      font-size: 11.5px;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       Footer strip
+    ============================================================ */
+    .resume-footer {
+      background: var(--rose-pale);
+      border-top: 1px solid var(--border);
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .resume-footer-left {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .resume-footer-right {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--rose);
+      letter-spacing: -0.2px;
+    }
+
+    /* ============================================================
+       Print / PDF
+    ============================================================ */
+    @media print {
+      .dl-bar { display: none !important; }
+      body { background: white; }
+      .resume-wrap { margin: 0; padding: 0; max-width: 100%; }
+      .resume-page { box-shadow: none; border-radius: 0; }
+    }
+
+    /* ============================================================
+       Responsive
+    ============================================================ */
+    @media (max-width: 680px) {
+      .resume-body { flex-direction: column; }
+      .resume-sidebar { width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); }
+      .projects-grid { grid-template-columns: 1fr; }
+      .personality-wrap { grid-template-columns: 1fr; }
+      .resume-header { flex-direction: column; text-align: center; }
+      .resume-tags { justify-content: center; }
+      .dl-bar { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== ACTION BAR ==================== -->
+<div class="dl-bar" id="dlBar">
+  <div class="dl-bar-brand">
+    <span class="dl-bar-brand-name">최미리 <span>이력서</span></span>
+    <div class="dl-bar-sep"></div>
+    <span class="dl-bar-label">Java 백엔드 개발자 · SI 팀장 / 책임</span>
+  </div>
+  <div class="dl-bar-actions">
+    <a href="/" class="btn-back">← 포트폴리오</a>
+    <button class="btn-pdf" id="btnPdf">
+      📄 PDF로 저장
+    </button>
+  </div>
+</div>
+
+<!-- ==================== RESUME PAGE ==================== -->
+<div class="resume-wrap">
+<div class="resume-page" id="resumeContent">
+
+  <!-- ── Header ── -->
+  <div class="resume-header">
+    <img src="static/images/avatar.jpg" alt="최미리 프로필 사진" class="resume-photo" />
+    <div class="resume-header-info">
+      <h1>최미리</h1>
+      <div class="resume-header-subtitle">
+        <span>Java 백엔드 개발자</span>
+        <div class="divider"></div>
+        <span>SI 팀장 / 책임</span>
+      </div>
+      <div class="resume-tags">
+        <span class="resume-tag">📅 2000.08.19 &nbsp;<span class="tag-em">(만 25세)</span></span>
+        <span class="resume-tag">📍 충청남도 아산 &nbsp;<span class="tag-em">· 자차 통근 가능</span></span>
+        <span class="resume-tag">🎓 안양대 대학원 &nbsp;<span class="tag-em">석사과정 재학 중</span></span>
+        <span class="resume-tag">💼 경력 <span class="tag-em">3년+</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Body ── -->
+  <div class="resume-body">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="resume-sidebar">
+
+      <!-- 연락처 -->
+      <div class="resume-sec">
+        <div class="sec-heading"><span class="sh-icon">📬</span> 연락처</div>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="ci">📧</span>
+            <span class="contact-muted">이메일을 입력해주세요</span>
+          </div>
+          <div class="contact-row">
+            <span class="ci">📞</span>
+            <span class="contact-muted">전화번호를 입력해주세요</span>
+          </div>
+          <div class="contact-row">
+            <span class="ci">🐙</span>
+            <span class="contact-muted">GitHub 링크를 입력해주세요</span>
+          </div>
+          <div class="contact-row">
+            <span class="ci">📍</span>
+            <div>
+              <strong>충청남도 아산</strong><br>
+              자차 보유, 어디든 출퇴근 가능
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 기술 스택 -->
+      <div class="resume-sec">
+        <div class="sec-heading"><span class="sh-icon">⚙️</span> 기술 스택</div>
+
+        <div class="skill-group">
+          <div class="sg-label">Back-End</div>
+          <div class="skill-pills">
+            <span class="sp sp-core">Java</span>
+            <span class="sp sp-strong">Spring MVC</span>
+            <span class="sp sp-strong">MyBatis</span>
+            <span class="sp sp-normal">eGovFramework</span>
+            <span class="sp sp-normal">Python</span>
+            <span class="sp sp-normal">PHP</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="sg-label">Front-End</div>
+          <div class="skill-pills">
+            <span class="sp sp-strong">JSP</span>
+            <span class="sp sp-normal">HTML / CSS</span>
+            <span class="sp sp-normal">JavaScript</span>
+            <span class="sp sp-normal">jQuery</span>
+            <span class="sp sp-normal">Ajax / REST</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="sg-label">Database</div>
+          <div class="skill-pills">
+            <span class="sp sp-strong">MySQL</span>
+            <span class="sp sp-strong">Oracle</span>
+            <span class="sp sp-normal">PostgreSQL</span>
+            <span class="sp sp-normal">Cubrid</span>
+            <span class="sp sp-normal">Tibero</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="sg-label">Tools</div>
+          <div class="skill-pills">
+            <span class="sp sp-normal">IntelliJ / Eclipse</span>
+            <span class="sp sp-normal">Maven</span>
+            <span class="sp sp-normal">Tomcat</span>
+            <span class="sp sp-normal">Git / GitHub</span>
+            <span class="sp sp-normal">ERD 설계</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 학력 -->
+      <div class="resume-sec">
+        <div class="sec-heading"><span class="sh-icon">🎓</span> 학력</div>
+
+        <div class="edu-item">
+          <div class="edu-period">2025.02 ~ 현재</div>
+          <div class="edu-school">안양대학교 대학원</div>
+          <div class="edu-dept">소프트웨어공학과</div>
+          <span class="edu-badge">석사과정 재학 중</span>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-period">2019.03 ~ 2023.02</div>
+          <div class="edu-school">백석대학교</div>
+          <div class="edu-dept">컴퓨터공학과</div>
+          <span class="edu-badge grad">졸업</span>
+        </div>
+      </div>
+
+      <!-- 관심 분야 -->
+      <div class="resume-sec">
+        <div class="sec-heading"><span class="sh-icon">🌟</span> 관심 분야</div>
+        <div class="keyword-chips">
+          <span class="kc">AI / LLM</span>
+          <span class="kc">QA 자동화</span>
+          <span class="kc">PM / 기획</span>
+          <span class="kc">클린 아키텍처</span>
+          <span class="kc">DevOps 학습 중</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="resume-main">
+
+      <!-- 자기소개 -->
+      <div class="resume-sec">
+        <div class="sec-heading"><span class="sh-icon">👤</span> 자기소개</div>
+        <div class="summary-box">
+          2022년 인턴을 시작으로 현재 SI 개발사에서 <strong>팀장(책임)</strong>으로 재직 중인 Java 백엔드 개발자입니다.
+          공공기관·사기업 웹 시스템 <strong>20여 개 프로젝트</strong>를 완수하며 개발뿐 아니라
+          <strong>기획·설계·QA·팀 리드</strong>까지 전방위로 경험을 쌓았습니다.
+          현재 안양대학교 대학원 소프트웨어공학과 석사과정을 병행하며 AI·QA 전문성을 지속 확장하고 있습니다.
+        </div>
+      </div>
+
+      <!-- 경력 -->
+      <div class="resume-sec">
+        <div class="sec-heading"><span class="sh-icon">💼</span> 경력 사항</div>
+        <div class="career-list-wrap">
+
+          <!-- 현재 직장 -->
+          <div class="career-item current">
+            <div class="career-top">
+              <span class="career-company">SI 개발사</span>
+              <span class="career-period">2023.03 ~ 현재 · 3년+</span>
+            </div>
+            <div class="career-role">
+              정규직 · 책임 / SI 팀장
+              <span class="cbadge cbadge-current">재직 중</span>
+            </div>
+            <div class="career-duties">
+              <div class="career-duty">SI 팀장으로 팀원 관리, 프로젝트 일정 조율 및 고객사 기술 협상 참석</div>
+              <div class="career-duty">공공기관 웹 홈페이지 및 내부 업무 시스템 다수 기획·설계·개발</div>
+              <div class="career-duty">VPP 전력 모니터링 시스템 1인 단독 개발 완수</div>
+              <div class="career-duty">ERD 설계, 요구사항 명세서, 테스트 시나리오 등 <strong>산출물 전담 관리</strong></div>
+              <div class="career-duty">신규 프로젝트 개발 공수 산출 및 SI 팀 채용 면접 진행</div>
+              <div class="career-duty">자사 신규 CMS 및 논문투고 시스템 설계·기획 경험 보유</div>
+            </div>
+            <div class="career-techs">
+              <span class="ct">Java</span><span class="ct">Spring MVC</span>
+              <span class="ct">eGovFramework</span><span class="ct">MyBatis</span>
+              <span class="ct">JSP</span><span class="ct">MySQL</span>
+              <span class="ct">Oracle</span><span class="ct">PostgreSQL</span>
+              <span class="ct">Cubrid</span><span class="ct">Tibero</span>
+            </div>
+          </div>
+
+          <!-- 인턴 -->
+          <div class="career-item">
+            <div class="career-top">
+              <span class="career-company">IT 스타트업 (서울 성수동)</span>
+              <span class="career-period">2022.09 ~ 2022.12 · 4개월</span>
+            </div>
+            <div class="career-role">
+              웹 개발 인턴
+              <span class="cbadge cbadge-intern">인턴</span>
+            </div>
+            <div class="career-duties">
+              <div class="career-duty">PHP 기반 웹 서비스 개발 참여</div>
+              <div class="career-duty">실무 환경에서의 첫 개발 경험 및 협업 프로세스 습득</div>
+            </div>
+            <div class="career-techs">
+              <span class="ct">PHP</span><span class="ct">HTML / CSS</span><span class="ct">MySQL</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 대표 프로젝트 -->
+      <div class="resume-sec">
+        <div class="sec-heading"><span class="sh-icon">📁</span> 대표 프로젝트</div>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-card-top">
+              <span class="proj-name">VPP 전력 모니터링 시스템</span>
+              <span class="proj-badge">⚡ 단독 개발</span>
+            </div>
+            <div class="proj-desc">가상발전소(VPP) 전력 데이터 실시간 수집·시각화 모니터링 시스템. 대시보드 및 알림 기능 포함.</div>
+            <div class="proj-role">담당: <span>백엔드 전체 · DB 설계 · 대시보드 · Java / Spring / PostgreSQL</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-top">
+              <span class="proj-name">온라인 코딩 테스트 플랫폼</span>
+              <span class="proj-badge">⚡ 단독 개발</span>
+            </div>
+            <div class="proj-desc">자사 채용 활용 온라인 코딩 테스트. 문제 출제·관리, 응시자 채점, 결과 통계 기능 기획·개발.</div>
+            <div class="proj-role">담당: <span>기획 · 설계 · 전체 개발 · Java / Spring / MySQL</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-top">
+              <span class="proj-name">5G/PC 반입반출 보안 시스템</span>
+              <span class="proj-badge">👥 2인</span>
+            </div>
+            <div class="proj-desc">보안 구역 내 5G 기기·PC 반입·반출 관리 내부 보안 시스템. 승인 워크플로우 및 이력 추적 구현.</div>
+            <div class="proj-role">담당: <span>백엔드 · 승인 워크플로우 설계 · Java / Spring / Oracle</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-top">
+              <span class="proj-name">공공기관 웹 홈페이지 다수</span>
+              <span class="proj-badge">🏛️ eGov</span>
+            </div>
+            <div class="proj-desc">eGovFramework 기반 공공기관 웹 홈페이지 다수 개발. 게시판, 민원, CMS 관리자 시스템 구현.</div>
+            <div class="proj-role">담당: <span>백엔드 · DB 설계 · JSP · Java / eGovFramework / Oracle</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 성격 장단점 -->
+      <div class="resume-sec">
+        <div class="sec-heading"><span class="sh-icon">🌱</span> 성격 장단점</div>
+        <div class="personality-wrap">
+
+          <div class="pers-col strengths">
+            <div class="pers-col-title">💪 장점</div>
+
+            <div class="pers-item">
+              <div class="pers-item-name">강한 책임감과 실행력</div>
+              <div class="pers-item-desc">맡은 업무는 끝까지 완수하며 마감을 철저히 지킵니다. 예상치 못한 문제에도 빠르게 원인을 파악하고 해결합니다.</div>
+            </div>
+
+            <div class="pers-item">
+              <div class="pers-item-name">체계적인 업무 관리 능력</div>
+              <div class="pers-item-desc">업무 전 전체 흐름을 정리하고 단계별 계획을 세워 불필요한 시행착오를 줄이고 일정 지연을 최소화합니다.</div>
+            </div>
+
+            <div class="pers-item">
+              <div class="pers-item-name">문제 해결 중심 사고</div>
+              <div class="pers-item-desc">단순 수행에 그치지 않고 "왜 문제가 발생했는지"를 고민하며 개선 방향까지 함께 제시합니다.</div>
+            </div>
+          </div>
+
+          <div class="pers-col growth">
+            <div class="pers-col-title">🌱 성장 중인 부분</div>
+
+            <div class="pers-item">
+              <div class="pers-item-name">높은 기준의 완성도 추구</div>
+              <div class="pers-item-desc">스스로 기준을 높게 설정하는 편이나, 최근 중요도에 따라 기준을 조절하며 효율을 높이고 있습니다.</div>
+            </div>
+
+            <div class="pers-item">
+              <div class="pers-item-name">직설적인 의사 표현</div>
+              <div class="pers-item-desc">핵심 전달을 중시하다 보니 직설적으로 느껴질 수 있어, 상대방 입장을 고려한 표현 방식을 의식적으로 개선 중입니다.</div>
+            </div>
+
+            <div class="pers-item">
+              <div class="pers-item-name">깊은 몰입 성향</div>
+              <div class="pers-item-desc">하나의 작업에 깊게 집중하는 경향이 있어, 주기적으로 우선순위를 점검하고 업무를 분산하며 균형을 맞추고 있습니다.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ── Footer ── -->
+  <div class="resume-footer">
+    <span class="resume-footer-left">이 이력서는 HTML로 제작되었으며 PDF로 저장 가능합니다.</span>
+    <span class="resume-footer-right">MIRI.DEV · 최미리</span>
+  </div>
+
+</div><!-- /resume-page -->
+</div><!-- /resume-wrap -->
+
+<!-- ==================== SCRIPT ==================== -->
+<script>
+  const btn  = document.getElementById('btnPdf');
+  const bar  = document.getElementById('dlBar');
+
+  btn.addEventListener('click', async function () {
+    btn.textContent = '⏳ 생성 중...';
+    btn.disabled = true;
+
+    // 바 숨기기 (PDF에 포함되지 않도록)
+    bar.style.display = 'none';
+
+    const element = document.getElementById('resumeContent');
+
+    const opt = {
+      margin: 0,
+      filename: '최미리_이력서.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        scrollX: 0,
+        scrollY: -window.scrollY,
+        windowWidth: element.scrollWidth,
+      },
+      jsPDF: {
+        unit: 'mm',
+        format: 'a4',
+        orientation: 'portrait',
+        compress: true,
+      },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
+    };
+
+    try {
+      await html2pdf().set(opt).from(element).save();
+    } catch (e) {
+      console.error('PDF 생성 오류:', e);
+      alert('PDF 생성 중 오류가 발생했습니다. 브라우저의 인쇄(Ctrl+P) → PDF 저장을 이용해주세요.');
+    } finally {
+      bar.style.display = '';
+      btn.innerHTML = '📄 PDF로 저장';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
+
